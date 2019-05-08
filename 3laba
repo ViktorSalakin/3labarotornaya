@@ -21,7 +21,7 @@ if(soglas(st)<glas(st))
 cnt++;
 }
 i=(-1);
-memset(st,'\0',30);
+memset(st,'\0',50);
 }
 else
 {
