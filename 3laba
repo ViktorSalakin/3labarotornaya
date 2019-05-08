@@ -15,6 +15,7 @@ for(i=0; (c=st[i]=getchar())!=EOF; i++)
 if(c==' '|| c=='.'||c==','||c=='\t'||c=='\n')
 {
 F=0;
+cnt = 0;
 if (prov(st,i) == 0)
 {
 if(soglas(st)<glas(st))
@@ -37,10 +38,11 @@ return 0;
 int glas(char s[])
 {
 int i, cnt;
+cnt = 0;
 i = 0;
 while (s[i] != '\0')
 {
-if (s[i] == 'o' || s[i] == 'a' || s[i] == 'e' || s[i] == 'u')
+if (s[i] == 'o' || s[i] == 'a' || s[i] == 'e' || s[i] == 'u' || s[i]=='e')
 cnt++;
 i++;
 }
@@ -50,9 +52,10 @@ int soglas(char s[])
 {
 int i, cnt;
 i = 0;
+cnt = 0;
 while (s[i] != '\0')
 {
-if (s[i] != 'o' && s[i] != 'a' && s[i] != 'e' && s[i] != 'u')
+if (s[i] != 'o' && s[i] != 'a' && s[i] != 'e' && s[i] != 'u' && s[i]!='i')
 cnt++;
 i++;
 }
